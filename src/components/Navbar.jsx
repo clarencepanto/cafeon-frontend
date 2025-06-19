@@ -23,7 +23,7 @@ function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              clsx(isActive ? "bg-[#FA9564]" : "bg-white")
+              clsx("rounded-lg", isActive ? "bg-[#FA9564]" : "bg-white")
             }
           >
             <li className="items-center justify-center flex w-[56px] h-[56px] hover:bg-[#FA9564] cursor-pointer rounded-md ">
@@ -33,7 +33,7 @@ function Navbar() {
           <NavLink
             to="/dashboard"
             className={({ isActive }) =>
-              clsx(isActive ? "bg-[#FA9564]" : "bg-white")
+              clsx("rounded-lg", isActive ? "bg-[#FA9564]" : "bg-white")
             }
           >
             <li className=" items-center justify-center flex w-[56px] h-[56px] hover:bg-[#FA9564] cursor-pointer rounded-md">
@@ -43,7 +43,7 @@ function Navbar() {
           <NavLink
             to="/customers"
             className={({ isActive }) =>
-              clsx(isActive ? "bg-[#FA9564]" : "bg-white")
+              clsx("rounded-lg", isActive ? "bg-[#FA9564]" : "bg-white")
             }
           >
             <li className="items-center justify-center flex w-[56px] h-[56px] hover:bg-[#FA9564] cursor-pointer rounded-md">

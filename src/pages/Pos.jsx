@@ -1,9 +1,9 @@
-import ProductCard from "../components/ProductCard";
+import Cart from "../components/Cart";
 
 function Pos() {
   return (
     <div>
-      <ProductCard />
+      <Cart />
     </div>
   );
 }
