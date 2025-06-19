@@ -4,6 +4,8 @@ import monitorIcon from "../assets/icons/monitor-one.png";
 import groupIcon from "../assets/icons/peoples-two.png";
 import logoutIcon from "../assets/icons/Logout.png";
 import { NavLink } from "react-router-dom";
+
+// good for toggling classes dynamically
 import clsx from "clsx";
 
 function Navbar() {

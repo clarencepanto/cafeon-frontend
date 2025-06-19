@@ -7,12 +7,15 @@ import Customers from "./pages/Customers.jsx";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Pos />}></Route>
-        <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/customers" element={<Customers />}></Route>
-      </Routes>
+      <div className="flex">
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Pos />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/customers" element={<Customers />}></Route>
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
