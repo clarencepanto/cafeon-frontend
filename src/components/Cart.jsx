@@ -53,7 +53,7 @@ function Cart() {
               productqty={data.quantity}
               onIncrease={() => increaseQuantity(data.id)}
               onDecrease={() => decreaseQuantity(data.id)}
-              onRemove={() => removeFromCart(TabItem.id)}
+              onRemove={() => removeFromCart(data.id)}
             />
           );
         })}
