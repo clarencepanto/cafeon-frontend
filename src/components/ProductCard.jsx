@@ -8,7 +8,7 @@ function ProductCard({
   productIng,
 }) {
   return (
-    <section className="md:w-[200px] md:h-[430px] md:bg-white md:p-2 md:rounded-md">
+    <section className="md:w-[200px] md:max-h-[430px] md:bg-white md:p-2 md:rounded-md">
       <article className="flex justify-center">
         <img
           src={productImg}
@@ -18,17 +18,17 @@ function ProductCard({
       </article>
       <article className="md:mt-[5px]">
         <div className="md:flex md:justify-between md:pl-2 md:pr-4 md:pt-2.5 ">
-          <h1 className=" md:text-[18px] md:tracking-wide">{productName}</h1>
-          <h3 className=" md:text-[18px] md:text-[#FA9564]">${productPrice}</h3>
+          <h1 className=" md:text-[15px] md:tracking-wide">{productName}</h1>
+          <h3 className=" md:text-[15px] md:text-[#FA9564]">${productPrice}</h3>
         </div>
-        <p className="md:text-[16px] md:pl-2 md:pr-2 md:pt-2.5 md:text-gray-400 overflow-y-scroll md:max-h-[110px]">
+        <p className="md:text-[13px] md:pl-2 md:pr-2 md:pt-2.5 md:text-gray-400 overflow-y-scroll md:max-h-[30px]">
           {JSON.parse(productIng).join(", ")}
         </p>
         <div className="md:flex md:justify-between md:pl-2 md:pr-2.5 md:pt-3">
           <div className="md:flex md:justify-center md:items-center">
-            <h3>Avail: {productQty}</h3>
+            <h3 className="md:text-[12px]">Avail: {productQty}</h3>
           </div>
-          <div className="md:w-[51px] md:h-[45px] md:flex md:justify-center md:items-center md:bg-[#FA9564] md:rounded-lg">
+          <div className="md:w-[40px] md:h-[35px] md:flex md:justify-center md:items-center md:bg-[#FA9564] md:rounded-lg">
             <img
               src={shoppingcartIcon}
               alt="shopping cart icon"

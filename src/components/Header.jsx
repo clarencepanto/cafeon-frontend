@@ -7,11 +7,14 @@ import coffeeIcon from "../assets/icons/coffee-machine.png";
 import teaIcon from "../assets/icons/cup-four.png";
 import cakeIcon from "../assets/icons/cake-four.png";
 import breadIcon from "../assets/icons/bread.png";
+import { useState } from "react";
 
 function Header() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <section>
-      <article className="flex justify-between border-2 border-amber-600 w-[450px] p-2 ">
+      <article className="flex justify-between  w-[450px] p-3 ">
         <article className="w-[150px]">
           <h2 className="font-bold">Clarence Panto</h2>
           <p className="text-[12px] text-gray-400">Sunday, June 21 2021</p>
@@ -23,11 +26,13 @@ function Header() {
           <input
             type="text"
             placeholder="search menu..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             className="bg-white w-full pl-9 rounded-lg "
           />
         </article>
       </article>
-      <article className="border-2 border-amber-600 flex justify-between p-3">
+      <article className=" flex justify-between p-3">
         <NavLink
           to="coffee"
           className={({ isActive }) =>
@@ -96,8 +101,8 @@ function Header() {
           </div>
         </NavLink>
       </article>
-      <article className="border-2 border-amber-600 max-h-[889px] p-3 overflow-y-scroll">
-        <Outlet />
+      <article className=" max-h-[750px] p-3 overflow-y-scroll">
+        <Outlet context={{ searchTerm }} />
       </article>
     </section>
   );
