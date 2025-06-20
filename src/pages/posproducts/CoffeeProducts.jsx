@@ -33,6 +33,7 @@ function CoffeeProducts() {
               return (
                 <ProductCard
                   key={data.id}
+                  productId={data.id}
                   productName={data.name}
                   productPrice={data.price}
                   productQty={data.quantity}

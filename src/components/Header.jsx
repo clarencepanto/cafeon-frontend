@@ -101,7 +101,7 @@ function Header() {
           </div>
         </NavLink>
       </article>
-      <article className=" max-h-[750px] p-3 overflow-y-scroll">
+      <article className=" max-h-[730px] p-3 overflow-y-scroll">
         <Outlet context={{ searchTerm }} />
       </article>
     </section>

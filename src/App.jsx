@@ -8,12 +8,14 @@ import CoffeeProducts from "./pages/posproducts/CoffeeProducts.jsx";
 import TeaProducts from "./pages/posproducts/TeaProducts.jsx";
 import PastriesProducts from "./pages/posproducts/PastriesProducts.jsx";
 import BreadProducts from "./pages/posproducts/BreadProducts.jsx";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="flex">
         <Navbar />
+        <Toaster position="top-center" reverseOrder={false} />
         <Routes>
           <Route path="/" element={<Pos />}>
             <Route index element={<Navigate to="coffee" />} />

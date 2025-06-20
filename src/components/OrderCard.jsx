@@ -9,7 +9,7 @@ function OrderCard({
   onRemove,
 }) {
   return (
-    <section className="md:bg-white md:w-[310px] md:h-[150px] md:p-3 md:border-1 md:border-gray-300">
+    <section className="md:bg-white md:w-[260px] md:h-[145px] md:p-3 md:border-1 md:border-gray-300">
       <article className="md:flex md:justify-between">
         <div>
           <h2 className="md:text-[17px] md:max-w-[165px] md:font-bold">
@@ -38,11 +38,11 @@ function OrderCard({
           </div>
         </div>
       </article>
-      <article className="md:mt-6 md:border-1 md:border-gray-400 md:rounded-md">
+      <article className="md:mt-6 md:border-1 md:border-gray-400 md:rounded-md md:w-[220px]">
         <input
           type="text"
           placeholder="insert note here..."
-          className="md:w-full md:pl-2 md:rounded-md  md:focus:outline-[#FA9564]"
+          className="md:w-[220px] md:pl-2 md:rounded-md  md:focus:outline-[#FA9564]"
         />
       </article>
     </section>
