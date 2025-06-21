@@ -10,13 +10,9 @@ import clsx from "clsx";
 
 function Navbar() {
   return (
-    <nav className=" w-[104px] bg-white h-screen flex flex-col items-center relative">
-      <div>
-        <img
-          src={cafeonLogo}
-          alt="cafeonLogo"
-          className="w-[103px] h-[103px]"
-        />
+    <nav className=" w-[70px] bg-white h-screen flex flex-col items-center relative">
+      <div className="md:h-[70px] md:w-[70px] md:mt-2">
+        <img src={cafeonLogo} alt="cafeonLogo" className="w-[70px] h-[70px]" />
       </div>
       <section className="mt-8 flex flex-col">
         <ul className="flex flex-col gap-5 text-center">
