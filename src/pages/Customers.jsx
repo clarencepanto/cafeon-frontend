@@ -1,7 +1,11 @@
-import React from "react";
+import RevenueWidgetDropDown from "../components/RevenueWidgetDropDown";
 
 function Customers() {
-  return <div>Customers</div>;
+  return (
+    <div>
+      <RevenueWidgetDropDown />
+    </div>
+  );
 }
 
 export default Customers;
