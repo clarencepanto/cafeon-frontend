@@ -1,16 +1,13 @@
 import { createContext, useContext, useState } from "react";
 
-// 1. Create context
 const CartContext = createContext();
 
-// 2. Custom hook to use cart
 export const useCart = () => useContext(CartContext);
 
-// 3. Cart Provider
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [customer, setCustomer] = useState(null); // 👈 New state
 
-  // Add to cart (if exists, increase qty)
   const addToCart = (product) => {
     setCart((prev) => {
       const exists = prev.find((item) => item.id === product.id);
@@ -25,7 +22,6 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // Increase quantity
   const increaseQuantity = (id) => {
     setCart((prev) =>
       prev.map((item) =>
@@ -34,7 +30,6 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Decrease quantity (remove if zero)
   const decreaseQuantity = (id) => {
     setCart((prev) =>
       prev
@@ -45,24 +40,25 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Remove from cart
   const removeFromCart = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // Get total
   const getTotal = () => {
     return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   };
 
   const clearCart = () => {
     setCart([]);
+    setCustomer(null); // 🧹 also clear customer
   };
 
   return (
     <CartContext.Provider
       value={{
         cart,
+        customer, // 👈 Expose customer info
+        setCustomer, // 👈 Expose setter
         addToCart,
         removeFromCart,
         increaseQuantity,
@@ -75,3 +71,5 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
+
+export default CartContext;

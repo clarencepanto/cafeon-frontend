@@ -9,6 +9,7 @@ function Cart() {
   const [receiptId, setReceiptId] = useState(0);
   const {
     cart,
+    customer,
     increaseQuantity,
     decreaseQuantity,
     removeFromCart,
@@ -38,8 +39,7 @@ function Cart() {
   const handleCheckout = async () => {
     try {
       const response = await axios.post("http://localhost:4000/sales", {
-        customer_id: null,
-        // or set to a value if using loyalty profiles
+        customer_id: customer?.id || null,
         items: cart.map((item) => ({
           product_id: item.id,
           price: item.price,
@@ -83,6 +83,7 @@ function Cart() {
               productname={data.name}
               productprice={data.price}
               productqty={data.quantity}
+              customerName={customer?.name}
               onIncrease={() => increaseQuantity(data.id)}
               onDecrease={() => decreaseQuantity(data.id)}
               onRemove={() => removeFromCart(data.id)}

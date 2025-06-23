@@ -18,8 +18,6 @@ function Dashboard() {
 
   const [bestProductInsightData, setBestProductInsightData] = useState("");
 
-  console.log("linegraph:", lineGraphData);
-
   // 💡 Format the raw data into Mon–Fri structure
   const formatWeeklySales = (data) => {
     const daysFull = [

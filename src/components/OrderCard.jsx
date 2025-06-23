@@ -7,13 +7,14 @@ function OrderCard({
   onIncrease,
   onDecrease,
   onRemove,
+  customerName,
 }) {
   return (
     <section className="md:bg-white md:w-[260px] md:h-[145px] md:p-3 md:border-1 md:border-gray-300">
       <article className="md:flex md:justify-between">
         <div>
           <h2 className="md:text-[17px] md:max-w-[165px] md:font-bold">
-            {productname}
+            {customerName || productname}
           </h2>
           <p className="md:text-[14px]">${productprice}</p>
         </div>
