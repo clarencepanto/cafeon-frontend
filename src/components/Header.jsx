@@ -14,12 +14,16 @@ function Header() {
 
   return (
     <section>
-      <article className="flex justify-between  w-[450px] p-3 ">
+      <article className="flex justify-between w-[450px] p-3 lg:w-[650px] xl:w-[800px] lg:p-4 xl:p-6">
         <article className="w-[150px]">
-          <h2 className="font-bold">Clarence Panto</h2>
-          <p className="text-[12px] text-gray-400">Sunday, June 21 2021</p>
+          <h2 className="font-bold text-base lg:text-lg xl:text-xl">
+            Clarence Panto
+          </h2>
+          <p className="text-[12px] text-gray-400 lg:text-[13px] xl:text-sm">
+            Sunday, June 21 2021
+          </p>
         </article>
-        <article className="flex w-[280px] h-[49px]">
+        <article className="flex w-[280px] h-[49px] lg:w-[350px] xl:w-[400px]">
           <div className="relative left-6 top-4">
             <img src={searchIcon} alt="searchIcon" />
           </div>
@@ -28,7 +32,7 @@ function Header() {
             placeholder="search menu..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="bg-white w-full pl-9 rounded-lg "
+            className="bg-white w-full pl-9 rounded-lg text-sm lg:text-base "
           />
         </article>
       </article>
@@ -42,11 +46,15 @@ function Header() {
             )
           }
         >
-          <div className="flex items-center justify-center w-[100px] h-[40px]  rounded-lg">
+          <div className="flex items-center justify-center w-[100px] h-[40px] rounded-lg lg:w-[120px] lg:h-[45px] xl:w-[140px] xl:h-[50px]">
             <div className="pr-2">
-              <img src={coffeeIcon} alt="coffeemachineicon" />
+              <img
+                src={coffeeIcon}
+                alt="coffeemachineicon"
+                className="w-4 lg:w-5 xl:w-6"
+              />
             </div>
-            <h3>Coffee</h3>
+            <h3 className="text-sm lg:text-base xl:text-lg">Coffee</h3>
           </div>
         </NavLink>
 
@@ -59,11 +67,11 @@ function Header() {
             )
           }
         >
-          <div className="flex items-center justify-center w-[100px] h-[40px] rounded-lg">
+          <div className="flex items-center justify-center w-[100px] h-[40px] rounded-lg lg:w-[120px] lg:h-[45px] xl:w-[140px] xl:h-[50px]">
             <div className="pr-2">
-              <img src={teaIcon} alt="teaicon" />
+              <img src={teaIcon} alt="teaicon" className="w-4 lg:w-5 xl:w-6" />
             </div>
-            <h3>Tea</h3>
+            <h3 className="text-sm lg:text-base xl:text-lg">Tea</h3>
           </div>
         </NavLink>
 
@@ -76,11 +84,15 @@ function Header() {
             )
           }
         >
-          <div className="flex items-center justify-center w-[100px] h-[40px] rounded-lg">
+          <div className="flex items-center justify-center w-[100px] h-[40px] rounded-lg lg:w-[120px] lg:h-[45px] xl:w-[140px] xl:h-[50px]">
             <div className="pr-2">
-              <img src={cakeIcon} alt="cakeicon" />
+              <img
+                src={cakeIcon}
+                alt="cakeicon"
+                className="w-4 lg:w-5 xl:w-6"
+              />
             </div>
-            <h3>Pastry</h3>
+            <h3 className="text-sm lg:text-base xl:text-lg">Pastry</h3>
           </div>
         </NavLink>
 
@@ -93,15 +105,19 @@ function Header() {
             )
           }
         >
-          <div className="flex items-center justify-center w-[100px] h-[40px] rounded-lg">
+          <div className="flex items-center justify-center w-[100px] h-[40px] rounded-lg lg:w-[120px] lg:h-[45px] xl:w-[140px] xl:h-[50px]">
             <div className="pr-2">
-              <img src={breadIcon} alt="breadicon" />
+              <img
+                src={breadIcon}
+                alt="breadicon"
+                className="w-4 lg:w-5 xl:w-6"
+              />
             </div>
-            <h3>Bread</h3>
+            <h3 className="text-sm lg:text-base xl:text-lg">Bread</h3>
           </div>
         </NavLink>
       </article>
-      <article className=" max-h-[730px] p-3 overflow-y-scroll">
+      <article className=" max-h-[730px] p-3 overflow-y-scroll lg:p-4 xl:p-6">
         <Outlet context={{ searchTerm }} />
       </article>
     </section>

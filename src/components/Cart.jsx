@@ -61,7 +61,7 @@ function Cart() {
   };
 
   return (
-    <section className="md:bg-white md:w-[245px] md:h-screen ">
+    <section className="md:bg-white md:w-[245px] md:h-screen lg:w-[300px] xl:w-[350px]">
       <article className="md:flex md:justify-between md:mr-2 md:ml-2 md:mb-3">
         <h1 className="md:text-[16px] md:font-bold">Current Order</h1>
         <div className="md:flex md:justify-center md:items-center">
@@ -75,7 +75,7 @@ function Cart() {
         </div>
       </article>
 
-      <div className="md:h-[550px] overflow-x-hidden oveflow-y-scroll">
+      <div className="md:h-[550px] overflow-x-hidden overflow-y-scroll lg:h-[600px] xl:h-[640px]">
         {cart.map((data) => {
           return (
             <OrderCard
@@ -103,17 +103,23 @@ function Cart() {
           <p className="md:mr-2">${taxtotal.toFixed(2)}</p>
         </div>
       </article>
-      <div className="border-2 border-dashed border-[#FA9564] md:mb-3"></div>
-      <article className="md:p-2">
-        <div className="md:flex md:justify-between md:mb-2">
-          <h2 className="md:font-bold md:text-[24px]">Total</h2>
-          <p className="md:font-bold md:text-[24px]">${total.toFixed(2)}</p>
+      <div className="border-2 border-dashed border-[#FA9564] md:mb-3 "></div>
+      <article className="md:p-2   lg:h-[35px] ">
+        <div className="md:flex md:justify-between md:mb-2 ">
+          <h2 className="md:font-bold md:text-[24px] lg:text-[26px] xl:text-[28px]">
+            Total
+          </h2>
+          <p className="md:font-bold md:text-[24px] lg:text-[26px] xl:text-[28px]">
+            ${total.toFixed(2)}
+          </p>
         </div>
         <div
           onClick={handleCheckout}
-          className="md:w-[230px] md:bg-[#FA9564] md:text-center md:pt-4 md:pb-4 md:text-white md:rounded-lg cursor-pointer md:mt-10"
+          className="md:w-[230px] md:bg-[#FA9564] md:text-center md:pt-4 md:pb-4 md:text-white md:rounded-lg cursor-pointer md:mt-10 lg:w-[260px] xl:w-[280px] lg:pt-5 xl:pt-6 lg:pb-5 xl:pb-6 lg:ml-5 lg:relative lg:bottom-7 lg:right-2"
         >
-          <button>Checkout</button>
+          <button className="text-[16px] lg:text-[18px] xl:text-[18px]">
+            Checkout
+          </button>
         </div>
       </article>
     </section>

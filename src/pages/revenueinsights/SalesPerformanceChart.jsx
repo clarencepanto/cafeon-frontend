@@ -10,8 +10,14 @@ import {
 
 function SalesPerformanceChart({ lineGraphData }) {
   return (
-    <div className="bg-white p-4 rounded-2xl shadow-md w-[435px] h-[610px]">
-      <h2 className="text-xl font-bold mb-4">Sales Performance by Days</h2>
+    <div
+      className="bg-white p-4 rounded-2xl shadow-md w-[435px] h-[610px]
+         lg:w-[580px] lg:h-[610px] xl:w-[600px] xl:h-[680px]
+        lg:ml-3 xl:p-7"
+    >
+      <h2 className="text-xl lg:text-[24px] font-bold mb-4">
+        Sales Performance by Days
+      </h2>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={lineGraphData}

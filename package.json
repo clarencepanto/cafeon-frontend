@@ -25,6 +25,7 @@
     "react-router-dom": "^7.6.2",
     "recharts": "^2.15.4",
     "sass": "^1.89.2",
+    "socket.io-client": "^4.8.1",
     "tailwindcss": "^4.1.10",
     "uuid": "^11.1.0"
   },

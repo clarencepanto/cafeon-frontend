@@ -32,11 +32,13 @@ function Customers() {
       );
 
       setCustomerData((prev) => [...prev, { id: data.id, ...newClient }]);
+      toast.success("Added Client Successfully!");
     } catch (err) {
       console.error(
         "❌ Failed to add client:",
         err.response?.data || err.message
       );
+      toast.error("Added Client Successfully!");
     }
   };
 
